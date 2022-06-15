@@ -4,8 +4,8 @@
     "layer0:dev": "layer0 dev",
     "layer0:build": "layer0 build",
     "layer0:deploy": "layer0 deploy",
-    "start": "sanity start",
-    "build": "sanity build"
+    "start": "npx sanity start",
+    "build": "npx sanity build"
   },
   "dependencies": {
     "@sanity/base": "^2.12.2",
