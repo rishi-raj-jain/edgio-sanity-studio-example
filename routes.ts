@@ -1,13 +1,20 @@
 // This file was added by layer0 init.
 // You should commit this file to source control.
 
-import { Router } from "@layer0/core/router";
+import { Router } from "@layer0/core/router"
 
 export default new Router()
-  // Send requests to static assets in the build output folder `dist`
-  .static("dist")
-
-  // Send everything else to the App Shell
+  .static("dist", ({ cache }) => {
+    cache({
+       browser: {
+         maxAgeSeconds: 0,
+         serviceWorkerSeconds: 60 * 60 * 24 * 365,
+       },
+       edge: {
+         maxAgeSeconds: 60 * 60 * 24 * 365,
+       }
+    })
+  })
   .fallback(({ appShell }) => {
-    appShell("dist/index.html");
-  });
+    appShell("dist/index.html")
+  })
