@@ -4,7 +4,7 @@
     "name": "My Sanity Project"
   },
   "api": {
-    "projectId": "hugo2lep",
+    "projectId": "x5ewd2iw",
     "dataset": "production"
   },
   "plugins": ["@sanity/base", "@sanity/components", "@sanity/default-layout", "@sanity/default-login", "@sanity/desk-tool"],
